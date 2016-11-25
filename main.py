@@ -12,15 +12,12 @@ while 1:
 	data=ser.readline().rstrip('\n')
 	#print data
 	data=data.strip()
-	if data != temp:
-		print data
-		if data[:1]=="[":
-			print "\a"
-			trimdata = data[1:-1].replace(":","")
-			thedata = urlEncode16(trimdata)
-			uri = config.keyuri+'%input%ktp%'+trimdata
-			thedata = urlEncode16(uri)
-			webbrowser.open_new(config.host+thedata)
-			#cursor.execute("INSERT INTO SER2DB(UID) VALUES ('"+data[1:-1]+"')")
-		temp = data 
+	print data
+	if data[:1]=="0":
+		print "\a"
+		trimdata = data.replace(" ","")
+		thedata = urlEncode16(trimdata)
+		uri = config.keyuri+'%input%ktp%'+trimdata
+		thedata = urlEncode16(uri)
+		webbrowser.open_new(config.host+thedata)
 
