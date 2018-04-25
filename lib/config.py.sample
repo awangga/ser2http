@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+"""
+config.py 
+set paramater of your server
+"""
+### Menus
+keyuri="WEB"
+tokenuri="API"
+
+### Database
+mongohost = "localhost"
+mongoport = 27017
+mysqlhost = "localhost"
+mysqldb = "dbname"
+mysqluser = "user"
+mysqlpassword = "dbpass"
+
+### Security module
+key = "your key 16 char"
+iv = "your iv 16 char"
+tokenurl = "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token="
+iss = "accounts.google.com"
+aud = "WEB_CLIENT_ID"
+domainacl = "poltekpos.ac.id"
+urltimeout = 3600
+
+### mapserver
+WMTS="http://127.0.0.1:8080/wmts/sampeu/ragi/{z}/{x}/{y}.png"
+
+
